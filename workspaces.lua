@@ -1,0 +1,18 @@
+hl.workspace_rule({ workspace = "1", monitor = MONITOR1, default = true, persistent = true })
+hl.workspace_rule({ workspace = "2", monitor = MONITOR1, default = true, persistent = true })
+hl.workspace_rule({ workspace = "3", monitor = MONITOR1, default = true, persistent = true })
+hl.workspace_rule({ workspace = "4", monitor = MONITOR1, default = true, persistent = true })
+hl.workspace_rule({ workspace = "5", monitor = MONITOR1, default = true, persistent = true })
+-- hl.workspace_rule({ workspace = "7", monitor = MONITOR3, default = true, persistent = true, layout = "scrolling", layout_opts = { direction = "down" } })
+
+-- sets single window on vertical monitor to a specific size/location
+hl.workspace_rule({
+    -- w = workspace, t = tiled layout, v = visible, # = number of windows
+    workspace = "w[tv1] m[DP-2] s[false]",
+    gaps_out = {
+        top = 200,
+        bottom = 882,
+        left = 8,
+        right = 8,
+    }
+})

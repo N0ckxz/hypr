@@ -1,0 +1,95 @@
+hl.config({
+	general = {
+		allow_tearing = true,
+		gaps_in = 2,
+		gaps_out = 2,
+		border_size = 0,
+		extend_border_grab_area = 10,
+		resize_on_border = true,
+	},
+
+	-- Input Devices
+	input = {
+		sensitivity = -0.25,
+		accel_profile = "flat",
+	},
+	cursor = {
+		no_hardware_cursors = 1,
+		-- use_cpu_buffer = 1,
+	},
+
+	-- Misc
+	misc = {
+		middle_click_paste = false,
+		enable_swallow = true,
+		swallow_regex = "(kitty)",
+		swallow_exception_regex = "wev",
+		disable_splash_rendering = true,
+		disable_hyprland_logo = true,
+		vrr = 3,
+		-- new_window_takes_over_fullscreen = 2,
+	},
+	xwayland = {
+		force_zero_scaling = true,
+	},
+	render = {
+		direct_scanout = 2,
+		-- cm_auto_hdr = 2,
+		-- new_render_scheduling = true,
+		-- cm_sdr_eotf = "default",
+	},
+	quirks = {
+		-- prefer_hdr = 1,
+		-- skip_non_kms_dmabuf_formats = true
+	},
+
+	-- Ecosystem
+	ecosystem = {
+		no_update_news = true,
+		no_donation_nag = true,
+	},
+
+	-- Decorations
+	decoration = {
+		dim_special = 0.3,
+		rounding = 0,
+		-- shadow:enabled = false
+		active_opacity = 1,
+		inactive_opacity = 0.85,
+		fullscreen_opacity = 1,
+		blur = {
+			size = 4,
+			passes = 4,
+			special = true,
+		},
+		-- motion_blur = {
+		--     enabled = true
+		-- },
+	},
+
+	-- Animations
+	-- animations = {
+	--     workspace_wraparound = true,
+	-- },
+
+	-- Layouts
+	-- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
+	dwindle = {
+		preserve_split = true, -- You probably want this
+	},
+	-- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
+	master = {
+		new_status = "slave",
+	},
+	-- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
+	scrolling = {
+		fullscreen_on_one_column = true,
+		-- follow_focus = false,
+		follow_min_visible = 0.10,
+		focus_fit_method = 1,
+		column_width = 0.7,
+	},
+})
+
+-- Video (runs on every config load)
+hl.exec_cmd("xrandr --output DP-1 --primary")
