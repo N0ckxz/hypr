@@ -8,6 +8,7 @@ require("userprefs")
 require("windowrules")
 require("workspaces")
 require("touchpad")
+require("keyboard")
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()

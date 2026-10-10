@@ -17,3 +17,4 @@ PRIMARY_MONITOR = MONITOR1
 
 -- Workspaces
 NUM_WPM = 5 -- Number of workspaces per monitor (Max 10)
+hl.env("XDG_MENU_PREFIX", "arch-")
