@@ -55,7 +55,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("uwsm app -- " .. FILE_MANAGER))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("uwsm app -- " .. EDITOR))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("uwsm app -- " .. CALCULATOR))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("uwsm app -- " .. BROWSER))
-hl.bind("CONTROL + SHIFT + Escape", hl.dsp.exec_cmd("uwsm app -T -- btop"))
+hl.bind("CONTROL + SHIFT + Escape", hl.dsp.exec_cmd("kitty -e btop"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(noctCall .. "settings-toggle"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(noctCall .. "panel-toggle control-center"))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher"))
@@ -75,10 +75,13 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd(noctCall .. "volume-mute"), { locked = 
 hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(noctCall .. "mic-mute"), { locked = true, repeating = true })
 
 -- Media
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(noctCall .. "media toggle"), { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd(noctCall .. "media toggle"), { locked = true })
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd(noctCall .. "media next"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(noctCall .. "media previous"), { locked = true })
+-- hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(noctCall .. "media toggle"), { locked = true })
+-- hl.bind("XF86AudioPause", hl.dsp.exec_cmd(noctCall .. "media toggle"), { locked = true })
+-- hl.bind("XF86AudioNext", hl.dsp.exec_cmd(noctCall .. "media next"), { locked = true })
+-- hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(noctCall .. "media previous"), { locked = true })
+hl.bind(mainMod .. " + Right", hl.dsp.exec_cmd(noctCall .. "media next"))
+hl.bind(mainMod .. " + Left", hl.dsp.exec_cmd(noctCall .. "media previous"))
+hl.bind(mainMod .. " + Up", hl.dsp.exec_cmd(noctCall .. "media toggle"))
 
 -- Display brightness
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl s 10%+"))

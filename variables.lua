@@ -1,9 +1,13 @@
 -- hypr globals
-TERMINAL     = "kitty"
+TERMINAL = "kitty"
 FILE_MANAGER = "dolphin"
-BROWSER      = "zen-browser"
-EDITOR       = "nvim"
-CALCULATOR   = "gnome-calculator"
+BROWSER = "zen-browser"
+EDITOR = "nvim"
+CALCULATOR = "gnome-calculator"
+
+-- Qt apps
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 
 -- Monitors
 MONITOR1 = "eDP-1"
